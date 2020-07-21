@@ -4,7 +4,7 @@
  * @Github: http://github.com/siaoynli
  * @Date: 2020-07-21 14:31:20
  * @LastEditors: lixiaoyun
- * @LastEditTime: 2020-07-21 14:47:04
+ * @LastEditTime: 2020-07-21 14:47:39
  * @Description:本地存储
  */
 
@@ -28,6 +28,7 @@ class LocalStore {
       console.log('error:', error)
     }
   }
+
   //获取
   public static get(key: string): string | null {
     if (!store) {
@@ -35,6 +36,7 @@ class LocalStore {
     }
     return store.getItem(key)
   }
+
   //获取数据转换成json
   public static getToJson(key: string): any {
     if (!store) {
